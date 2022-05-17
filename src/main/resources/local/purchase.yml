@@ -1,0 +1,29 @@
+spring:
+  config:
+    activate:
+      on-profile: "local"
+purchase:
+  datasource:
+    hikari:
+      driver-class-name: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/fw?zeroDateTimeBehavior=convertToNull
+      username: root
+      password: "1q2w3e4r!!"
+      format-sql: true
+      connection-test-query: SELECT NOW()
+      minimum-idle: 12
+      maximum-pool-size: 12
+      pool-name: purchase-pool-local
+      cachePrepStmts: true
+      prepStmtCacheSize: 250
+      prepStmtCacheSqlLimit: 2048
+      useServerPrepStmts: true
+      useLocalSessionState: true
+      rewriteBatchedStatements: true
+      cacheResultSetMetadata: true
+      cacheServerConfiguration: true
+      elideSetAutoCommits: true
+      maintainTimeStats: false
+      max-lifetime: 3000
+      maxLifetime: 3000
+      leakDetectionThreshold: 2000
